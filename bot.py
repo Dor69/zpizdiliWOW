@@ -75,5 +75,4 @@ if __name__ == '__main__':
     news_thread = threading.Thread(target=news_checker)
     news_thread.start()
 
-    # Запускаем бота
     bot.infinity_polling()
