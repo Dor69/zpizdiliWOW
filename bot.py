@@ -31,7 +31,8 @@ def send_latest_3_news(message):
     for n in news:
         bot.send_message(
             message.chat.id,
-            f"{n['title']}\n{n['description']}\nАвтор: {n['author']}\nСсылка: {n['link']}"
+            f"*{n['title']}*\n\n{n['description']}\n\n*Автор:* _{n['author']}_\n\n[Читать далее]({n['link']})",
+            parse_mode='Markdown'  # Добавляем Markdown разметку
         )
 
 @bot.message_handler(func=lambda message: message.text == "Вывести последнюю новость")
@@ -43,7 +44,8 @@ def send_latest_news(message):
     n = news[0]
     bot.send_message(
         message.chat.id,
-        f"{n['title']}\n{n['description']}\nАвтор: {n['author']}\nСсылка: {n['link']}"
+        f"*{n['title']}*\n\n{n['description']}\n\n*Автор:* _{n['author']}_\n\n[Читать далее]({n['link']})",
+        parse_mode='Markdown'  # Добавляем Markdown разметку
     )
 
 @bot.message_handler(func=lambda message: message.text == "Подписаться на рассылку")
@@ -60,8 +62,10 @@ def send_news_to_subscribers(news):
     for subscriber in subscribers:
         bot.send_message(
             subscriber,
-            f"{news['title']}\n{news['description']}\nАвтор: {news['author']}\nСсылка: {news['link']}"
+            f"*{news['title']}*\n\n{news['description']}\n\n*Автор:* _{news['author']}_\n\n[Читать далее]({news['link']})",
+            parse_mode='Markdown'  # Добавляем Markdown разметку
         )
+
 
 def news_checker():
     while True:
