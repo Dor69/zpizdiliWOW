@@ -1,0 +1,51 @@
+config.py
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+venv.bak/
+*.env
+
+# PyCharm
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Virtual environments
+.env
+*.env
+env/
+venv/
