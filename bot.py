@@ -4,10 +4,10 @@ from parser import get_latest_news, check_for_new_news
 import threading
 import time
 
-from config import API_TOKEN as API
+from config import BOT_API as API
 
 
-API_TOKEN = 'API'
+API_TOKEN = f'{API}'
 bot = telebot.TeleBot(API_TOKEN)
 
 # Список подписчиков
